@@ -4,4 +4,10 @@
  * Add or delete these files as per needed.
  */
 
+import { marqueeScrollIx } from '../helpers/marquee-scroll'
+
 console.log('Hello from Home folder')
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  marqueeScrollIx()
+})
