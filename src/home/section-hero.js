@@ -47,7 +47,7 @@ export const sectionHero = () => {
 
     // Fallback in case 'loadeddata' event doesn't fire
     heroVideo.addEventListener('canplay', () => {
-      if (heroVideo.readyState >= 3) {
+      if (heroVideo.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
         playVideo()
       }
     })
