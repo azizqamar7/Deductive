@@ -10,6 +10,7 @@ import { marqueeScrollIx } from '../helpers/marquee-scroll'
 import { sectionIntegration } from './section-integration'
 import { sectionLayoutChange } from './section-layout-change'
 import { sectionHero } from './section-hero'
+import { sectionSecure } from './section-secure'
 
 console.log('Hello from Home folder')
 
@@ -22,11 +23,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
   // Marquee Ix
   marqueeScrollIx()
 
-  // Section Horizontal
-  if (window.innerWidth > 767) {
-    sectionLayoutChange()
-  }
+  // Section Layout Chagne
+  sectionLayoutChange()
 
   // Section Integrations
   sectionIntegration()
+
+  // Section Secure
+  sectionSecure()
 })

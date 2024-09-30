@@ -36,4 +36,27 @@ export const sectionLayoutChange = () => {
       })
     })
   }
+
+  const bgChangeIx = () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.section_layout_change',
+        start: 'top 0%',
+        onEnter: () => {
+          gsap.to('.section_layout_change, .layout_bg', {
+            backgroundColor: '#061611',
+            duration: 0.4,
+          })
+        },
+        onLeaveBack: () => {
+          gsap.to('.section_layout_change, .layout_bg', {
+            backgroundColor: '#eef9f0',
+            duration: 0.4,
+          })
+        },
+      },
+    })
+  }
+
+  bgChangeIx()
 }
