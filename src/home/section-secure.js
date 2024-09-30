@@ -38,7 +38,7 @@ export const sectionSecure = () => {
       trigger: '.section_home_secure',
       start: 'top 0%',
       onEnter: () => {
-        darkTl.play()
+        darkTl.restart()
       },
       onLeaveBack: () => {
         lightTl.restart()
