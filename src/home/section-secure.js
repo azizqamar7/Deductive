@@ -24,6 +24,7 @@ export const sectionSecure = () => {
       backgroundColor: '#eef9f0',
       duration: 0.4,
       color: '#0d251f',
+      ease: 'power2.out',
     })
     .to('.section_home_secure h2', { color: '#0d251f' }, 0)
     .to(
