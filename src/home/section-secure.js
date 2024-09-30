@@ -17,21 +17,21 @@ export const sectionSecure = () => {
       0
     )
 
-  const lightTl = gsap.timeline()
+  //   const lightTl = gsap.timeline()
 
-  lightTl
-    .to('.section_home_secure', {
-      backgroundColor: '#eef9f0',
-      duration: 0.4,
-      color: '#0d251f',
-      ease: 'power2.out',
-    })
-    .to('.section_home_secure h2', { color: '#0d251f' }, 0)
-    .to(
-      '.section_home_secure .text-color-dark-green-light',
-      { color: '#194439' },
-      0
-    )
+  //   lightTl
+  //     .to('.section_home_secure', {
+  //       backgroundColor: '#eef9f0',
+  //       duration: 0.4,
+  //       color: '#0d251f',
+  //       ease: 'power2.out',
+  //     })
+  //     .to('.section_home_secure h2', { color: '#0d251f' }, 0)
+  //     .to(
+  //       '.section_home_secure .text-color-dark-green-light',
+  //       { color: '#194439' },
+  //       0
+  //     )
 
   const tl = gsap.timeline({
     scrollTrigger: {
@@ -40,9 +40,9 @@ export const sectionSecure = () => {
       onEnter: () => {
         darkTl.restart()
       },
-      onLeaveBack: () => {
-        lightTl.restart()
-      },
+      //   onLeaveBack: () => {
+      //     lightTl.restart()
+      //   },
     },
   })
 }
