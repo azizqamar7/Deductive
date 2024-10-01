@@ -11,6 +11,8 @@ import { sectionIntegration } from './section-integration'
 import { sectionLayoutChange } from './section-layout-change'
 import { sectionHero } from './section-hero'
 import { sectionSecure } from './section-secure'
+import { sectionVideoTrigger } from './section-video-trigger'
+import { sectionHorizontalScroll } from './section-horizontal'
 
 console.log('Hello from Home folder')
 
@@ -24,7 +26,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
   marqueeScrollIx()
 
   // Section Layout Chagne
-  sectionLayoutChange()
+  // sectionLayoutChange()
+  // sectionVideoTrigger()
+
+  // Section Horizontal
+  if (window.innerWidth > 990) {
+    sectionHorizontalScroll()
+  }
 
   // Section Integrations
   sectionIntegration()
