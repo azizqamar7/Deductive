@@ -36,7 +36,7 @@ export const sectionSecure = () => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.section_home_secure',
-      start: 'top 0%',
+      start: 'top 50%',
       onEnter: () => {
         darkTl.restart()
       },
