@@ -44,32 +44,34 @@ export const sectionHorizontalScroll = () => {
 
   const navbarToggle = () => {
     // Get the navbarOverlay element
-    const navbarOverlay = document.querySelector('[navbar-overlay]')
+    const navbarTriggers = document.querySelectorAll('[navbar-toggle]')
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '[section_layout_change]',
-        start: 'top 0%',
-        onToggle: (self) => {
-          // Hide Navbar in this section
-          if (self.isActive) {
-            gsap.to('.navbar', {
-              y: '-110%',
-              duration: 1,
-              ease: 'power3.out',
-              overwrite: true,
-            })
-          } else {
-            gsap.to('.navbar', {
-              y: '0%',
-              duration: 0.5,
-              ease: 'power3.out',
-              clearProps: 'transform',
-              overwrite: true,
-            })
-          }
+    navbarTriggers.forEach((trigger) => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: trigger,
+          start: 'top 0%',
+          onToggle: (self) => {
+            // Hide Navbar in this section
+            if (self.isActive) {
+              gsap.to('.navbar', {
+                y: '-110%',
+                duration: 1,
+                ease: 'power3.out',
+                overwrite: true,
+              })
+            } else {
+              gsap.to('.navbar', {
+                y: '0%',
+                duration: 0.5,
+                ease: 'power3.out',
+                clearProps: 'transform',
+                overwrite: true,
+              })
+            }
+          },
         },
-      },
+      })
     })
   }
   navbarToggle()
