@@ -40,7 +40,7 @@ export const sectionHorizontalScroll = () => {
     })
   }
 
-  bgChangeIx()
+  // bgChangeIx()
 
   const navbarToggle = () => {
     // Get the navbarOverlay element

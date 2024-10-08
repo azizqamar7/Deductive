@@ -38,5 +38,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
   sectionIntegration()
 
   // Section Secure
-  sectionSecure()
+  // sectionSecure()
 })
